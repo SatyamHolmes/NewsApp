@@ -13,8 +13,5 @@ export class Constraints {
 
 export abstract class NewsApiService {
   abstract getSources(): Observable<SourcesList>;
-  abstract filterBySource(source: string): Observable<ArticlesList>;
-  abstract filterByConstraints(constraints: {
-
-  }): Observable<ArticlesList>;
+  abstract filterByConstraints(constraints: Constraints): Observable<ArticlesList>;
 }

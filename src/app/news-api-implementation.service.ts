@@ -21,16 +21,6 @@ export class NewsApiImplementationService implements NewsApiService {
     );
   }
 
-  filterBySource(source: string): Observable<ArticlesList> {
-    const url = `${this.baseUrl}v2/top-headlines`;
-    return this.httpClient.get<ArticlesList>(url, {params: new HttpParams().set('sources', source)}).pipe(
-      catchError((err, caught) => {
-        console.log(err);
-        return of(new ArticlesList());
-      })
-    );
-  }
-
   filterByConstraints(constraints: Constraints): Observable<ArticlesList> {
     const url = `${this.baseUrl}v2/top-headlines`;
     let options = new HttpParams();
