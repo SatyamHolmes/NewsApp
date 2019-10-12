@@ -1,0 +1,23 @@
+button {
+  color: black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 1.1em;
+  border: 0;
+  border-style: none;
+  border-radius: 20px;
+  background: rgb(56, 185, 56);
+  outline: none;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.filter-component {
+  margin: 10px;
+}
+
+.filter-title {
+  background: #d5d4d4;
+}

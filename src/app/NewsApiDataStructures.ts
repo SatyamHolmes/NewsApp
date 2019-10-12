@@ -1,4 +1,4 @@
-class Source {
+export class Source {
   id: string;
   name: string;
   description?: string;
@@ -13,7 +13,7 @@ export class SourcesList {
   sources: Source[];
 }
 
-class Article {
+export class Article {
   source: Source;
   author: string;
   title: string;
