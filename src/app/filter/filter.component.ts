@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NewsApiService } from '../news-api.service';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, ValidatorFn, ValidationErrors } from '@angular/forms';
 import { Source, ArticlesList } from '../NewsApiDataStructures';
 
 @Component({
@@ -31,7 +31,11 @@ export class FilterComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.constraints.value);
+    this.articlesFetchedEvent.emit({
+      status: 'ok',
+      totalResults: null,
+      articles: null,
+    });
     this.newsApiService.filterByConstraints({
       sources: this.constraints.value.sources,
       query: this.constraints.value.query,
