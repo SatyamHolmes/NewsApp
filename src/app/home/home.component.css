@@ -1,0 +1,36 @@
+.home-component {
+  width: 50vw;
+  margin: auto;
+  margin-top: 45vh;
+}
+
+.wait {
+  margin: auto;
+  margin-top: 45vh;
+}
+
+.source-input {
+  width: 80%;
+  font-size: 1.8em;
+}
+
+button {
+  color: black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  font-size: 1.1em;
+  border: 0;
+  border-style: none;
+  border-radius: 20px;
+  background: rgb(56, 185, 56);
+  outline: none;
+  cursor: pointer;
+  width: fit-content;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: initial;
+  text-decoration: none;
+}

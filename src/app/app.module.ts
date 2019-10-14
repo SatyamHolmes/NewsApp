@@ -16,11 +16,15 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import { PostComponent } from './post/post.component';
+import { HomeComponent } from './home/home.component';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 @NgModule({
   declarations: [
     AppComponent,
     FilterComponent,
-    PostComponent
+    PostComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +36,8 @@ import { PostComponent } from './post/post.component';
     MatInputModule,
     FlexLayoutModule,
     MatCardModule,
+    MatAutocompleteModule,
+    MatProgressSpinnerModule,
   ],
   providers: [
     ApiKeyInterceptorProvider,

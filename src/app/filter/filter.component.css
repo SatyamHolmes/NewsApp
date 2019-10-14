@@ -21,3 +21,7 @@ button {
 .filter-title {
   background: #d5d4d4;
 }
+
+mat-form-field {
+  font-size: 1.3em;
+}

@@ -1,0 +1,16 @@
+<mat-progress-spinner class="wait" *ngIf="!sources" color="white" mode="indeterminate"></mat-progress-spinner>
+<mat-card class="home-component" *ngIf="sources">
+  <mat-card-content fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+    <mat-form-field class="source-input" fxFlexAlign="center">
+      <input type="text" placeholder="Source" aria-label="Source" matInput [formControl]="selectedSource" [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option.name}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <div fxFlexAlign="center">
+        <button (click)="onSearch()">Search</button>
+    </div>
+  </mat-card-content>
+</mat-card>

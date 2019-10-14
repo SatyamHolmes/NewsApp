@@ -9,15 +9,9 @@ import { NewsApiService } from './news-api.service';
 
 export class AppComponent implements OnInit {
   title = 'news-app';
-  sources: Source[];
 
-  constructor(private newApiService: NewsApiService) {}
+  constructor() {}
 
   ngOnInit() {
-    this.newApiService.getSources().subscribe((response) => {
-      if (response.status === 'ok') {
-        this.sources = response.sources;
-      }
-    });
   }
 }
